@@ -43,4 +43,9 @@ def main():
     url = 'https://www.kivano.kg/mobilnye-telefony'
     html = get_html(url)
     data = get_data(html)
+    for page in range(2, 15):
+        url = f"https://www.kivano.kg/mobilnye-telefony?page={page}"
+        html = get_html(url)
+        data = get_data(html)
+
 main()
